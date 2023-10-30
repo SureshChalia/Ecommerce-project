@@ -43,8 +43,8 @@ function Product({product}) {
           text-[12px] p-1 px-3 uppercase 
           hover:bg-blue-900
           hover:text-white transition duration-300 ease-in"
-          onClick={removeFromCart}>
-            remove Item 
+          >
+            Item Added
           </button>) :
           (<button
           className="text-white border-2 border-gray-100 rounded-full font-semibold 

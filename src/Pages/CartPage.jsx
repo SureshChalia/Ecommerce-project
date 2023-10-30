@@ -8,9 +8,20 @@ function CartPage({item}) {
 
   const {cart} = useSelector((state)=>state);
   const [totalAmount,setTotalAmount]=useState(0);
+  const [totalItems, setTotalItems] = useState(0);
 
   useEffect(()=>{
-    setTotalAmount(cart.reduce((acc,curr)=>acc+curr.productPrice,0));
+    const calculatedTotalAmount = cart.reduce((acc, curr) => {
+      return acc + curr.productPrice * curr.quantity;
+    }, 0);
+
+    const calculatedTotalItems = cart.reduce((acc, curr) => {
+      // Accumulate the quantity of each item
+      return acc + curr.quantity;
+    }, 0);
+
+    setTotalAmount(calculatedTotalAmount);
+    setTotalItems(calculatedTotalItems);
   },[cart])
 
   return (
@@ -32,11 +43,11 @@ function CartPage({item}) {
             <div className='text-blue-700 font-bold'>YOUR CART</div>
             <div className='text-blue-700 font-bold text-[25px]'>SUMMARY</div>
             <p>
-              <span className='font-semibold'>Total Item:{cart.length}</span>
+              <span className='font-semibold'>Total Item: {totalItems}</span>
             </p>
           </div>
           <div className='flex flex-col gap-5'>
-            <p className='font-semibold'>Total Amount: <b>${totalAmount}</b> </p>
+            <p className='font-semibold'>Total Amount: <b>₹ {totalAmount}</b> </p>
             <button className='bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded w-full'>Checkout Now</button>
           </div>
          </div>
