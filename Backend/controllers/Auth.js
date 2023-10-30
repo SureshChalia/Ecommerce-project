@@ -15,8 +15,9 @@ exports.signUp = async (req, res) => {
       email,
       password,
       confirmPassword,
-      // accountType,
       contactNumber,
+      dob,
+      address,
       otp,
     } = req.body;
     
@@ -27,8 +28,9 @@ exports.signUp = async (req, res) => {
       !password ||
       !confirmPassword ||
       !contactNumber ||
+      !dob ||
+      !address ||
       !otp 
-      // !accountType
       ) {
       return res.status(403).send({
         success: false,
@@ -79,6 +81,8 @@ exports.signUp = async (req, res) => {
       name,
       email,
       contactNumber,
+      dob,
+      address,
       password: hashedPassword,
       role:"User",
       image: `https://api.dicebear.com/5.x/initials/svg?seed=${name}`,

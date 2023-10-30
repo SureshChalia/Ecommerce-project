@@ -9,8 +9,6 @@ const {
   SENDOTP_API,
   SIGNUP_API,
   LOGIN_API,
-  // RESETPASSTOKEN_API,
-  // RESETPASSWORD_API,
 } = endpoints
 
 export function sendOtp(email, navigate) {
@@ -47,8 +45,10 @@ export function signUp(
   password,
   confirmPassword,
   contactNumber,
+  dob,
+  address,
   otp,
-  navigate
+  navigate 
 ) {
   return async (dispatch) => {
     const toastId = toast.loading("Loading...")
@@ -60,6 +60,8 @@ export function signUp(
         password,
         confirmPassword,
         contactNumber,
+        dob,
+        address,
         otp,
       })
       console.log("SIGNUP API RESPONSE............", response)
@@ -72,6 +74,8 @@ export function signUp(
     } catch (error) {
       console.log("SIGNUP API ERROR............", error)
       toast.error("Signup Failed")
+      dispatch(setLoading(false))
+      toast.dismiss(toastId)
       navigate("/signup")
     }
     dispatch(setLoading(false))

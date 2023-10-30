@@ -29,15 +29,15 @@ const UserProfile = () => {
               </div>
               <div>
                 <p className="block text-gray-700 text-sm font-bold mb-2" >Date of Birth </p>
-                <p className="border rounded-lg px-3 py-2 w-full">5/09/1999</p>
+                <p className="border rounded-lg px-3 py-2 w-full">{user.dob}</p>
               </div>
               <div>
                 <p className="block text-gray-700 text-sm font-bold mb-2" > Phone </p>
-                <p className="border rounded-lg px-3 py-2 w-full"> 9877734432</p>
+                <p className="border rounded-lg px-3 py-2 w-full">{user.contactNumber}</p>
               </div>
               <div>
                 <p className="block text-gray-700 text-sm font-bold mb-2" > Address </p>
-                <p className="border rounded-lg px-3 py-2 w-full">Abohar,Punjab</p>
+                <p className="border rounded-lg px-3 py-2 w-full">{user.address}</p>
               </div>
             </div>
 
