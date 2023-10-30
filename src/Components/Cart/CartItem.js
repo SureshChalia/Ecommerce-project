@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiFillDelete } from "react-icons/ai"
-import {GrFormAdd} from "react-icons/gr"
-import {HiOutlineMinusSm} from "react-icons/hi"
+import { GrFormAdd } from "react-icons/gr"
+import { HiOutlineMinusSm } from "react-icons/hi"
 import { useDispatch } from 'react-redux'
 import { remove, increaseQuantity, decreaseQuantity } from "../../slices/cartSlice"
 import toast from 'react-hot-toast';
@@ -30,30 +30,35 @@ function CartItem({ item }) {
 
   return (
     <div>
-      <div className='flex flex-row items-center gap-8 p-4 mt-10 ml-5 rounded-xl  border-b-2 w-100'>
-        <div className='h-[7rem] w-[10rem]'>
-          <img src={item.productImage} alt="cart item" className="w-full h-full object-fitt rounded-md"/>
+      <div className='justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start'>
+        <div className='h-24 w-24'>
+          <img src={item.productImage} alt="cart item" className="rounded-lg sm:w-40 w-full h-full object-fitt" />
         </div>
-        <div className='flex flex-col gap-3 mt-0 pt-0 w-11/12 '>
-          <h1 className="text-gray-700 font-semibold text-lg text-left  mt-0 ">{item.productName}</h1>
-          <h1 className=" text-gray-400 font-normal text-[15px] text-left ">{item.productDescription}</h1>
-          <div className='flex justify-between'>
-            <div className='flex items-center gap-2'>
-              <button onClick={decreaseItemQuantity} className='bg-gray-300 rounded-full hover:cursor-pointer flex items-center justify-center' style={{ width: '30px', height: '30px' }} >
+        <div className='sm:ml-4 sm:flex sm:w-full sm:justify-between'>
+          <div className="mt-5 sm:mt-0">
+            <h2 className="text-lg font-bold text-gray-900">{item.productName}</h2>
+            <p className="mt-1 text-xs text-gray-700">{item.productDescription}</p>
+          </div>
+          <div className='mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6'>
+            <div className='flex items-center border-gray-100'>
+              <button onClick={decreaseItemQuantity} className='cursor-pointer rounded-l bg-gray-100 py-1 px-2 duration-100 hover:bg-blue-500 hover:text-blue-50' style={{ width: '30px', height: '30px' }} >
+
                 <HiOutlineMinusSm />
               </button>
-              <p className='text-blue-600 font-semibold'>{item.quantity}</p>
-              <button onClick={increaseItemQuantity} className='bg-gray-300 rounded-full hover:cursor-pointer flex items-center justify-center' style={{ width: '30px', height: '30px' }}>
+              <p className="h-8 w-8 border bg-white text-center text-xs outline-none pt-2">{item.quantity}</p>
+              <button onClick={increaseItemQuantity} className='cursor-pointer rounded-l bg-gray-100 py-1 px-2 duration-100 hover:bg-blue-500 hover:text-blue-50' style={{ width: '30px', height: '30px' }}>
                 <GrFormAdd />
               </button>
             </div>
-            <p className="text-blue-600 font-semibold">₹ {item.productPrice * item.quantity}</p>
-            <div
-              onClick={removeFromCart}
-              className='flex items-center justify-center bg-red-400 rounded-full hover:cursor-pointer'
-              style={{ width: '30px', height: '30px' }} 
-            >
-              <AiFillDelete className='m-1' />
+            <div className="flex items-center space-x-4">
+              <p className="text-blue-600 font-semibold">₹ {item.productPrice * item.quantity}</p>
+              <div
+                onClick={removeFromCart}
+                className='flex items-center justify-center bg-red-400 rounded-full hover:cursor-pointer'
+                style={{ width: '30px', height: '30px' }}
+              >
+                <AiFillDelete className='m-1' />
+              </div>
             </div>
           </div>
         </div>
