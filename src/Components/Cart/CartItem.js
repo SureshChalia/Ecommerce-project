@@ -31,7 +31,7 @@ function CartItem({ item }) {
   return (
     <div>
       <div className='justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start'>
-        <div className='h-24 w-24'>
+        <div className='h-28 w-48'>
           <img src={item.productImage} alt="cart item" className="rounded-lg sm:w-40 w-full h-full object-fitt" />
         </div>
         <div className='sm:ml-4 sm:flex sm:w-full sm:justify-between'>
