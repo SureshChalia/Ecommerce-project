@@ -33,7 +33,7 @@ const Login = () => {
 
   return (
     <div>
-      <section className="h-screen w-11/12 flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0 pt-36">
+      <section className="h-screen w-11/12 flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center  mx-5 md:mx-0 md:my-0 pt-36">
         <div className="md:w-1/3 max-w-sm">
           <img
             src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
