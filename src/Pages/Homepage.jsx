@@ -18,7 +18,7 @@ const Homepage = () => {
     <>
     <div className='bg-white'>
       <div>
-        <div className='hidden sm:flex items-center justify-center h-full gap-9 bg-slate-200 p-6 text-gray-500 pt-36'>
+        <div className='hidden sm:flex items-center justify-center h-full gap-9 bg-slate-200 p-6 text-gray-500 pt-40'>
           <div className='flex justify-center items-center gap-2'>
             <p className='text-lg sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl'><RiExchangeCnyFill /></p>
             <p className='whitespace-normal font-semibold text-base sm:text-sm md:text-sm lg:text-base xl:text-base'>Easy Return/ <br class='hidden lg:inline md:inline xl:inline' />Exchange</p>

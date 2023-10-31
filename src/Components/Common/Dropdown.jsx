@@ -16,6 +16,7 @@ const navigate = useNavigate();
   const handleLogout = (event) => {
     event.preventDefault();
     dispatch(logout(navigate));
+    setIsOpen(false);
   };
 
   const userString = localStorage.getItem("user");
@@ -43,15 +44,15 @@ const navigate = useNavigate();
 
       {/* Dropdown menu */}
       {isOpen && (
-        <div className="z-10 absolute left-0 mt-2 w-44 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700">
+        <div className="z-10 absolute left-0 mt-2 w-[8rem] bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700">
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-            <li>
-              <Link to={UserRole === 'User' ? '/userdashboard' : '/dashboard'} className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <li className='pl-2 pr-2'>
+              <Link to={UserRole === 'User' ? '/userdashboard' : '/dashboard'} className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white rounded-md"  onClick={() => setIsOpen(false)}>
                 Dashboard
               </Link>
             </li>
-            <li>
-              <Link  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" onClick={handleLogout}>
+            <li className='pl-2 pr-2'>
+              <Link  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white rounded-md" onClick={handleLogout}>
                 Log out
               </Link>
             </li>

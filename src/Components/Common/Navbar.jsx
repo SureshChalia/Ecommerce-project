@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 import logo from "../../Assets/logo.avif"
-import { Link, useNavigate,NavLink } from 'react-router-dom';
-import ProfileDropDown from './ProfileDropDown';
+import { Link, NavLink } from 'react-router-dom';
 import Dropdown from './Dropdown';
-// import { AiOutlineMenu, AiOutlineClose, AiOutlineShoppingCart } from "react-icons/ai"
 import { FaShoppingCart } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
-import { logout } from '../../services/operations/authAPI';
-import { useDispatch } from 'react-redux';
+
 
 
 
@@ -15,17 +12,15 @@ const Navbar = () => {
   const { token } = useSelector((state) => state.auth);
   const [navbar, setNavbar] = useState(false);
   const { cart } = useSelector((state) => state);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const handleLogout = (event) => {
-    event.preventDefault();
-    dispatch(logout(navigate));
+  
+  const closeNavbar = () => {
+    setNavbar(false);
   };
+
 
   return (
     <div className='fixed w-full z-50'>
-      <div className='flex items-center justify-center h-full bg-slate-500' >  <p className='p-2 text-white sm:text-sm'>Free Shipping Across India. COD Available above 1500 INR. Pay in 3 Using Snapmint.</p> </div>
+      <div className='flex items-center justify-center h-full bg-slate-400' >  <p className='p-2 text-white text-xs sm:text-base text-center md:text-lg'>Free Shipping Across India. COD Available above 1500 INR. Pay in 3 Using Snapmint.</p> </div>
       <nav className="w-full bg-gradient-to-b from-slate-100 to-indigo-200 shadow">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
@@ -78,22 +73,22 @@ const Navbar = () => {
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <li className="text-blue-800 font-semibold hover:text-indigo-400">
-                  <NavLink to="/">Home</NavLink>
+                  <NavLink to="/" onClick={closeNavbar}>Home</NavLink>
                 </li>
                 <li className="text-blue-800 font-semibold hover:text-indigo-400">
-                  <NavLink to="">Men</NavLink>
+                  <NavLink to="" onClick={closeNavbar}>Men</NavLink>
                 </li>
                 <li className="text-blue-800 font-semibold hover:text-indigo-400">
-                  <NavLink to="">Women</NavLink>
+                  <NavLink to="" onClick={closeNavbar}>Women</NavLink>
                 </li>
                 <li className="text-blue-800 font-semibold hover:text-indigo-400">
-                  <NavLink to="">Shoes</NavLink>
+                  <NavLink to="" onClick={closeNavbar}>Shoes</NavLink>
                 </li>
                 <li className="text-blue-800 font-semibold hover:text-indigo-400">
-                  <NavLink to="">Sports</NavLink>
+                  <NavLink to="" onClick={closeNavbar}>Sports</NavLink>
                 </li>
                 <li className="text-blue-800 font-semibold hover:text-indigo-400">
-                  <NavLink to="/productpage">Accessories</NavLink>
+                  <NavLink to="/productpage"  onClick={closeNavbar}>Accessories</NavLink>
                 </li>
               </ul>
 

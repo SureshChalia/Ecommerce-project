@@ -40,7 +40,7 @@ const Review = () => {
         >
           {Reviews.map((review) => (
             <SwiperSlide key={review.id} className="">
-              <div className="p-4 border rounded-lg shadow-lg bg-gradient-to-t from-cyan-400 to-pink-200">
+              <div className="p-4 border rounded-lg shadow-lg bg-gradient-to-t from-slate-100 via-blue-400 to-violet-100">
                 <h2 className="text-xl font-semibold mb-2 text-center text-blue-700">{review.productName}</h2>
                 <p className="text-white mb-4">{review.reviewText}</p>
                 <div className="flex items-center justify-between font-bold">

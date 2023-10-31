@@ -57,13 +57,13 @@ const Login = () => {
           <div className="my-5 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
             <p className="mx-4 mb-0 text-center font-semibold text-slate-500">Or</p>
           </div>
-          <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded"
+          <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded focus:outline-none"
             type="text"
             placeholder="Email Address"
             name="email"
             value={email}
             onChange={handleOnChange} />
-          <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
+          <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4 focus:outline-none"
             type="password"
             placeholder="Password"
             name="password"
@@ -71,7 +71,7 @@ const Login = () => {
             onChange={handleOnChange} />
           <div className="mt-4 flex justify-between font-semibold text-sm">
             <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer">
-              <input className="mr-1" type="checkbox" />
+              <input className="mr-1 focus:outline-none" type="checkbox" />
               <span>Remember Me</span>
             </label>
             <a className="text-blue-600 hover:text-blue-700 hover:underline hover:underline-offset-4" href="#">Forgot Password?</a>

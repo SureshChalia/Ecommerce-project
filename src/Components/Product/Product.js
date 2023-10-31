@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {add,remove} from"../../slices/cartSlice"
+import {add} from"../../slices/cartSlice"
 import toast from 'react-hot-toast';
 
 function Product({product}) {
@@ -12,11 +12,7 @@ function Product({product}) {
     dispatch(add(product));
     toast.success("Item added to cart");
   }
-  const removeFromCart=()=>{
-    dispatch(remove(product._id))
-    toast.error("Item removed from cart");
-  }
-
+ 
   return (
     <div className="flex flex-col items-center justify-between 
     hover:scale-110 transition duration-300 ease-in gap-3 p-4 mt-10 ml-5 rounded-xl border-solid border-2 border-gray-100 hover:shadow-xl">

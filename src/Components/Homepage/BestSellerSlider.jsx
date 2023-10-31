@@ -89,15 +89,19 @@ const HeaderSlider = () => {
   const breakpoints = {
     0: {
       slidesPerView: 1,
+      spaceBetween: 10,
     },
-    320: {
-      slidesPerView: 1, // Show only 1 slide when screen width is 320px or smaller
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
     768: {
-      slidesPerView: 2, // Show 2 slides when screen width is 768px or larger
+      slidesPerView: 2,
+      spaceBetween: 30,
     },
     1024: {
-      slidesPerView: 3, // Show 3 slides when screen width is 1024px or larger
+      slidesPerView: 3,
+      spaceBetween: 40,
     },
   };
 

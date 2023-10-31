@@ -15,7 +15,7 @@ const UserProfile = () => {
               className="rounded-full w-24 h-24 object-cover bg-slate-300"
             />
           </div>
-          <h1 className="text-2xl font-bold mb-4 text-blue-500">Welcome <span>{user.name}r</span></h1>
+          <h1 className="text-2xl font-bold mb-4 text-blue-500">Welcome <span>{user.name}</span></h1>
          </div>
           <div className="flex gap-4 mt-5">
             <div className='w-full space-y-5'>

@@ -13,7 +13,6 @@ function ProductPage() {
     try {
       const result = await getAllProducts();
       setProducts(result);
-      console.log(result, "all products");
     } catch (error) {
       console.log("Error occured during fetching the all products",error);
       setProducts([]);
@@ -24,7 +23,7 @@ function ProductPage() {
     fetchProductData();
   },[])
   return (
-    <div className='pt-36 pb-36'>
+    <div className='pt-36 pb-36 w-full'>
      {
       loading?<Spinner/>:
       products.length>0?
