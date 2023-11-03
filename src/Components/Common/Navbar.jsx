@@ -72,32 +72,33 @@ const Navbar = () => {
                 }`}
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="text-blue-800 font-semibold hover:text-indigo-400">
+                <li className="text-blue-800 font-semibold hover:text-indigo-400 ml-3">
                   <NavLink to="/" onClick={closeNavbar}>Home</NavLink>
                 </li>
-                <li className="text-blue-800 font-semibold hover:text-indigo-400">
+                <li className="text-blue-800 font-semibold hover:text-indigo-400 ml-3">
                   <NavLink to="" onClick={closeNavbar}>Men</NavLink>
                 </li>
-                <li className="text-blue-800 font-semibold hover:text-indigo-400">
+                <li className="text-blue-800 font-semibold hover:text-indigo-400 ml-3">
                   <NavLink to="" onClick={closeNavbar}>Women</NavLink>
                 </li>
-                <li className="text-blue-800 font-semibold hover:text-indigo-400">
+                <li className="text-blue-800 font-semibold hover:text-indigo-400 ml-3">
                   <NavLink to="" onClick={closeNavbar}>Shoes</NavLink>
                 </li>
-                <li className="text-blue-800 font-semibold hover:text-indigo-400">
+                <li className="text-blue-800 font-semibold hover:text-indigo-400 ml-3">
                   <NavLink to="" onClick={closeNavbar}>Sports</NavLink>
                 </li>
-                <li className="text-blue-800 font-semibold hover:text-indigo-400">
+                <li className="text-blue-800 font-semibold hover:text-indigo-400 ml-3">
                   <NavLink to="/productpage"  onClick={closeNavbar}>Accessories</NavLink>
                 </li>
               </ul>
 
-              <div className="mt-3 gap-2 flex items-center md:hidden">
+              <div className="mt-3 gap-2 flex items-center md:hidden ml-3">
                 {
                   token === null && (
                     <Link
                       to="/login"
-                      className="inline-block w-fit px-4 py-2 text-center text-white bg-blue-800 rounded-md shadow hover:bg-gray-800"
+                      className="inline-block w-fit px-4 py-2 text-center text-white bg-blue-600 rounded-md shadow hover:bg-blue-800"
+                      onClick={closeNavbar}
                     >
                       Log in
                     </Link>
@@ -108,7 +109,7 @@ const Navbar = () => {
                     <Dropdown/>
                   )
                 }
-                <Link to="/cart">
+                <Link to="/cart" onClick={closeNavbar}>
                   <div className="relative w-fit">
                     < FaShoppingCart className="text-2xl text-blue-800" />
                     {
@@ -128,7 +129,8 @@ const Navbar = () => {
               token === null && (
                 <Link
                   to="/login"
-                  className="px-4 py-2 text-white bg-blue-800 rounded-md shadow hover:bg-gray-800"
+                  className="px-4 py-2 text-white bg-blue-600 rounded-md shadow hover:bg-blue-800"
+                  onClick={closeNavbar}
                 >
                   Log in
                 </Link>
@@ -141,7 +143,7 @@ const Navbar = () => {
                
               )
             }
-            <Link to="/cart">
+            <Link to="/cart" >
               <div className="relative">
                 < FaShoppingCart className="text-2xl text-blue-800" />
                 {

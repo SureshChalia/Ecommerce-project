@@ -44,14 +44,14 @@ const Footer = () => {
             <img
               src={logo}
               alt=""
-              className="w-16 h-auto bg-white"
+              className=" h-14"
             />
             <span className="text-3xl font-bold pl-2 text-white">
-              Gambol
+              Roarfit
             </span>
           </div>
           <div className="infos text-white">
-            <span>Copyright © 2023 Gambol ltd.</span>
+            <span>Copyright © 2023 Roarfit ltd.</span>
             <span>All rights reserved</span>
           </div>
           <div className="footer-icons flex items-center space-x-3 pt-4">
