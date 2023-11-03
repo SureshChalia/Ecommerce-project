@@ -6,7 +6,7 @@ import image4 from "../../Assets/EveryoneBuying/furoshiki.jpg"
 
 const EveryoneBuying = () => {
   return (
-    <div className='flex flex-col w-11/12 mx-auto  mt-12 border-b border-gray-500'>
+    <div className='flex flex-col lg:max-w-7xl mx-auto  mt-12  border-gray-500'>
       <div className='flex flex-col items-center text-center p-4'>
         <p className='text-base lg:text-4xl md:text-2xl xl:text-4xl text-blue-800 font-bold xs:text-lg mb-2 w-full'>WHAT EVERYONE IS BUYING</p>
         <p className='text-blue-500 text-sm sm:text-base lg:text-lg xl:text-xl mb-2 max-w-xs sm:max-w-md lg:max-w-lg w-[90%]'>

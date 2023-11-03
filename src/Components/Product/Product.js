@@ -23,7 +23,7 @@ function Product({product}) {
         <p className="w-40 text-gray-400 font-normal text-[13px] text-left">{product.productDescription.split(" ").slice(0,50).join(" ") + "..."}</p>
       </div>
       <div className='h-36 w-44 rounded-md'>
-        <img  className="w-full h-full object-fitt rounded-md" src={product.productImage} alt="" />
+        <img  className="w-full h-full object-fit aspect-square rounded-md" src={product.productImage} alt="" />
       </div>
       <div className="flex justify-between gap-12 items-center w-full mt-2">
         <div>

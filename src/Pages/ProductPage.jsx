@@ -23,12 +23,12 @@ function ProductPage() {
     fetchProductData();
   },[])
   return (
-    <div className='pt-36 pb-36 w-full'>
-     {
+    <div className='pt-36 pb-36 lg:max-w-7xl mx-auto w-11/12'>
+     { 
       loading?<Spinner/>:
       products.length>0?
       (
-        <div className="grid  xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl p-2 mx-auto space-y-10 space-x-5 min-h-[50vh]">
+        <div className="grid  xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-7xl  mx-auto space-y-10  min-h-[50vh]">
           {
             products.map((product)=>{
               return <Product key={product._id} product={product}/>

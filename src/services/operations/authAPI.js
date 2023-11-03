@@ -45,8 +45,6 @@ export function signUp(
   password,
   confirmPassword,
   contactNumber,
-  dob,
-  address,
   otp,
   navigate 
 ) {
@@ -60,8 +58,6 @@ export function signUp(
         password,
         confirmPassword,
         contactNumber,
-        dob,
-        address,
         otp,
       })
       console.log("SIGNUP API RESPONSE............", response)

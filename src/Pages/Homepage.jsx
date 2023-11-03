@@ -49,7 +49,7 @@ const Homepage = () => {
         <HeaderSlider />
       </div>
       {/* Best seller slider */}
-      <div className='flex flex-col lg:flex-row w-11/12 mx-auto items-center px-4 lg:px-16 py-12 lg:py-24 gap-5 sm:px-0'>
+      <div className='flex flex-col lg:flex-row mx-auto items-center py-12 lg:py-24 gap-5 px-4 md:px-0 lg:max-w-7xl'>
         <div className='lg:w-[30%] w-full'>
           <p className='text-lg lg:text-4xl md:text-2xl xl:text-4xl sm:text-sm text-blue-800 font-bold xs:text-lg'>OUR <br /> BESTSELLERS</p>
           <p className='text-2xl text-blue-800 font-semibold xs:text-sm'>

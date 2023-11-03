@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from "../../Assets/logo.avif"
+import logo from "../../Assets/company-logo.PNG"
 import { Link, NavLink } from 'react-router-dom';
 import Dropdown from './Dropdown';
 import { FaShoppingCart } from 'react-icons/fa';
@@ -22,11 +22,11 @@ const Navbar = () => {
     <div className='fixed w-full z-50'>
       <div className='flex items-center justify-center h-full bg-slate-400' >  <p className='p-2 text-white text-xs sm:text-base text-center md:text-lg'>Free Shipping Across India. COD Available above 1500 INR. Pay in 3 Using Snapmint.</p> </div>
       <nav className="w-full bg-gradient-to-b from-slate-100 to-indigo-200 shadow">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+        <div className="justify-between  mx-auto lg:max-w-7xl md:items-center md:flex">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <Link to="/">
-                <h2 className="text-2xl font-bold text-blue-800 "> <img src={logo} alt="" /> </h2>
+                 <img src={logo} alt="logo" className='h-12 md:16 text-blue-800' />
               </Link>
               <div className="md:hidden">
                 <button

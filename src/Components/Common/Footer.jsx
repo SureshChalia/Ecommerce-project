@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../../Assets/logo.avif"
+import logo from "../../Assets/company-logo.PNG"
 import {
   FaInstagram,
   FaDribbble,

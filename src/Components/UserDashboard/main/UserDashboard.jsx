@@ -9,7 +9,7 @@ const UserDashboard = () => {
   return (
     <>
      {mobileSidebar && <UserMobileSideBar setShowSideBar={setShowSideBar} />}
-      <div className="max-w-maxContainer mx-auto w-[95%] pt-36 pb-36">
+      <div className="max-w-7xl mx-auto w-11/12 pt-36 pb-36">
         <div className="w-full flex gap-4">
           <div className="w-1/6 max-w-[280px] py-2 sticky top-0 h-screen hidden lg:block">
             <UserSidebar />

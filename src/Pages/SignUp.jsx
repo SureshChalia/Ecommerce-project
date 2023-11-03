@@ -18,12 +18,10 @@ const SignUp = () => {
     password: "",
     confirmPassword: "",
     contactNumber: "",
-    dob:"",
-    address:"",
   })
 
 
-  const { name, email, password, confirmPassword, contactNumber,dob,address } = formData
+  const { name, email, password, confirmPassword, contactNumber} = formData
 
   // Handle input fields, when some value changes
   const handleOnChange = (e) => {
@@ -58,8 +56,6 @@ const SignUp = () => {
       password: "",
       confirmPassword: "",
       contactNumber: "",
-      dob:"",
-      address:""
     })
 
   }
@@ -99,12 +95,6 @@ const SignUp = () => {
             onChange={handleOnChange} />
           <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4 focus:outline-none" type="tel" placeholder="Enter Your Contact Number" name="contactNumber"
             value={contactNumber}
-            onChange={handleOnChange} />
-          <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4 focus:outline-none" type="date" placeholder="Date of Birth" name="dob"
-            value={dob}
-            onChange={handleOnChange} />
-          <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4 focus:outline-none" type="textarea" placeholder="Enter Your Address" name="address"
-            value={address}
             onChange={handleOnChange} />
           <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4 focus:outline-none" type="password" placeholder="Password" name="password"
             value={password}
