@@ -4,7 +4,7 @@ import { faker } from "@faker-js/faker";
 const Settings = () => {
   const adminImage = faker.image.avatar();
   return (
-    <div>
+    <div className="w-11/12">
       <div className=" p-8">
         <div className=" bg-gray-50 p-8 rounded shadow-md">
           <h1 className="text-2xl font-bold mb-4">Admin Profile</h1>

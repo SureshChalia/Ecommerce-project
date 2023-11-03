@@ -22,7 +22,7 @@ const Navbar = () => {
     <div className='fixed w-full z-50'>
       <div className='flex items-center justify-center h-full bg-slate-400' >  <p className='p-2 text-white text-xs sm:text-base text-center md:text-lg'>Free Shipping Across India. COD Available above 1500 INR. Pay in 3 Using Snapmint.</p> </div>
       <nav className="w-full bg-gradient-to-b from-slate-100 to-indigo-200 shadow">
-        <div className="justify-between  mx-auto lg:max-w-7xl md:items-center md:flex">
+        <div className="justify-between w-11/12 mx-auto lg:max-w-7xl md:items-center md:flex">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <Link to="/">

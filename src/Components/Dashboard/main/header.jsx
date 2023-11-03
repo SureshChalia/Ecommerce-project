@@ -13,14 +13,14 @@ const Header = ({ setShowSideBar }) => {
   const location = useLocation();
   return (
     <header className="flex justify-between flex-wrap items-center font-Montserrat py-1">
-      <div className="text-2xl font-bold flex items-center gap-2 justify-between w-full sm:w-fit">
+      <div className="text-2xl font-bold flex items-center gap-2 justify-between w-11/12 sm:w-fit">
         <GiHamburgerMenu
           className="block hover:cursor-pointer lg:hidden"
           onClick={() => setShowSideBar(true)}
         />
         <div className="text-blue-600">{location.pathname.split("/").at(-1).toUpperCase()}</div>
       </div>
-      <div className="flex gap-4 items-center w-full md:w-fit md:mt-0 mt-2">
+      <div className="flex gap-4 items-center w-11/12 md:w-fit md:mt-0 mt-2">
         <div className="relative  tablet:text-sm w-full">
           <input
             type="text"

@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../../Assets/company-logo.PNG"
+import logo from "../../Assets/footer-logo.PNG"
 import {
   FaInstagram,
   FaDribbble,
@@ -46,9 +46,9 @@ const Footer = () => {
               alt=""
               className=" h-14"
             />
-            <span className="text-3xl font-bold pl-2 text-white">
+            {/* <span className="text-3xl font-bold pl-2 text-white">
               Roarfit
-            </span>
+            </span> */}
           </div>
           <div className="infos text-white">
             <span>Copyright © 2023 Roarfit ltd.</span>

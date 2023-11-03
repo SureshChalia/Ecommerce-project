@@ -5,17 +5,18 @@ const UserProfile = () => {
   const user = JSON.parse(userString);
   return (
     <div>
-      <div className=" p-8">
-        <div className=" bg-gray-50 p-8 rounded shadow-md">
+      <div className="p-8">
+        <div className=" bg-gray-50 p-8 rounded shadow-md w-11/12">
          <div className='flex items-center gap-5'>
-         <div className="flex flex-col justify-center gap-3 ">
+         <div className="flex justify-center gap-3 ">
             <img
               src={`https://api.dicebear.com/5.x/initials/svg?seed=${user.name}`}
               alt="user"
               className="rounded-full w-24 h-24 object-cover bg-slate-300"
             />
+            <h1 className="text-2xl font-bold mb-4 text-blue-500 py-7">Welcome <span>{user.name}</span></h1>
           </div>
-          <h1 className="text-2xl font-bold mb-4 text-blue-500">Welcome <span>{user.name}</span></h1>
+          
          </div>
           <div className="flex gap-4 mt-5">
             <div className='w-full space-y-5'>
